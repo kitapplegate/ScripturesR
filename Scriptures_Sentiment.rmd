@@ -2,7 +2,7 @@
 title: "Bible Analysis"
 author: "Kit Applegate"
 date: "2023-06-11"
-output: html_document
+output: github_document
 ---
 
 The code is a sentiment of the Church of Jesus Christ of Latter-Day Saints scriptures. The results of the analysis can be used to understand how the scriptures make people feel. For example, the plot that shows the most common words with the sentiment "joy" shows that the word "joy" is used frequently in the scriptures. This suggests that the scriptures often make people feel happy. The plot that shows the sentiment of each chapter in the scriptures shows that most chapters have a positive sentiment. This suggests that the scriptures are generally uplifting and inspiring. I learned and used the code made by Julia Silge in her book [Text Mining with R: A Tidy Approach](https://www.tidytextmining.com/index.html)
@@ -76,5 +76,3 @@ ggplot(scriptures_sentiment, aes(index, sentiment, fill = volume_title)) +
   facet_wrap(~volume_title, scales = "free_x")
 
 ```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
