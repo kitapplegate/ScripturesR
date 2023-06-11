@@ -1,5 +1,5 @@
 ---
-title: "Bible Analysis"
+title: "Scripture Analysis"
 author: "Kit Applegate"
 date: "2023-06-11"
 output: github_document
