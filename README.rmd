@@ -63,7 +63,7 @@ tidy_scriptures %>%
 
 6.  The last line of code creates a plot that shows the sentiment of each chapter in the Church of Jesus Christ of Latter-Day Saints scriptures. The sentiment is calculated by counting the number of positive and negative words in each chapter and then subtracting the number of negative words from the number of positive words.
 
-I found this exercise to be a fascinating way to visualize the themes of the scriptures. The Book of Mormon and the New Testament both show a cycle of pride, turmoil, and hope, while the Doctrine and Covenants is mostly positive. I hope you enjoyed this as much as I did!
+I found this to be a fascinating way to visualize the themes of the scriptures. The Book of Mormon and the New Testament both show a cycle of pride, turmoil, and hope, while the Doctrine and Covenants is mostly positive. I hope you enjoyed this as much as I did!
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
 
