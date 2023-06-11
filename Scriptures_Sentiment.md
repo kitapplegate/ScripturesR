@@ -5,7 +5,7 @@ date: "2023-06-11"
 output: html_document
 ---
 
-The code is a sentiment of the Church of Jesus Christ of Latter-Day Saints scriptures. The results of the analysis can be used to understand how the scriptures make people feel. For example, the plot that shows the most common words with the sentiment "joy" shows that the word "joy" is used frequently in the scriptures. This suggests that the scriptures often make people feel happy. The plot that shows the sentiment of each chapter in the scriptures shows that most chapters have a positive sentiment. This suggests that the scriptures are generally uplifting and inspiring. I learned and used the code made by Julia Silge in her book [Text Mining with R: A Tidy Approach](https://www.tidytextmining.com/index.html)
+The code is a sentiment of the Church of Jesus Christ of Latter-Day Saints scriptures. The results of the analysis can be used to understand how the scriptures make people feel. For example, the plot that shows the most common words with the sentiment "joy" shows that the word "joy" is used frequently in the scriptures. This suggests that the scriptures often make people feel happy. The plot that shows the sentiment of each chapter in the scriptures shows that most chapters have a positive sentiment. This suggests that the scriptures are generally uplifting and inspiring. I learned and used the code made by Julia Silge and David Robinson in thier book [Text Mining with R: A Tidy Approach](https://www.tidytextmining.com/index.html)
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -13,12 +13,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 1.  The first three lines of code load three libraries: tidyverse, scriptuRs, and tidytext. These libraries provide functions for data wrangling, text analysis, and sentiment analysis, respectively.
 
-```{r cars, message=FALSE, warning=FALSE, include=FALSE}
+```{r cars, echo=TRUE, message=FALSE, warning=FALSE}
+
 library(tidyverse)
 library(scriptuRs)
 library(tidytext)
 
 lds_scriptures <- lds_scriptures()
+
 ```
 
 2.  The next line of code creates a data frame called lds_scriptures. This data frame contains the text of all of the scriptures in the Church of Jesus Christ of Latter-Day Saints canon.
@@ -26,11 +28,11 @@ lds_scriptures <- lds_scriptures()
 3.  The next few lines of code create a plot that shows the number of verses in each book of the Church of Jesus Christ of Latter-Day Saints scriptures.
 
 ```{r pressure, echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
+
 lds_scriptures %>%
   group_by(volume_title, book_title) %>%
   summarise(total_verses = n()) %>%
   arrange(desc(total_verses))
-  
 
 ```
 
@@ -40,7 +42,7 @@ lds_scriptures %>%
 
 6.  The last line of code creates a plot that shows the sentiment of each chapter in the Church of Jesus Christ of Latter-Day Saints scriptures. The sentiment is calculated by counting the number of positive and negative words in each chapter and then subtracting the number of negative words from the number of positive words.
 
-```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
+```{r echo=TRUE, message=FALSE, warning=FALSE}
 
 tidy_scriptures <- lds_scriptures %>%
   group_by(volume_title) %>%
@@ -63,7 +65,7 @@ tidy_scriptures %>%
 
 6.  The last line of code creates a plot that shows the sentiment of each chapter in the Church of Jesus Christ of Latter-Day Saints scriptures. The sentiment is calculated by counting the number of positive and negative words in each chapter and then subtracting the number of negative words from the number of positive words.
 
-```{r echo=TRUE, message=FALSE, warning=FALSE}
+```{r}
 
 scriptures_sentiment <- tidy_scriptures %>%
   inner_join(get_sentiments("bing")) %>%
@@ -76,5 +78,3 @@ ggplot(scriptures_sentiment, aes(index, sentiment, fill = volume_title)) +
   facet_wrap(~volume_title, scales = "free_x")
 
 ```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
