@@ -36,7 +36,7 @@ lds_scriptures %>%
 
 4.  The next line of code creates a data frame called tidy_scriptures. This data frame is a smaller version of lds_scriptures that has been processed by the tidytext library. This processing includes breaking the text into individual words and assigning each word a sentiment.
 
-5.  The next line of code creates a plot that shows the most common words with the sentiment "joy" in the LDS scriptures.
+5.  The next line of code creates a plot that shows the most common words with the sentiment "joy" in the the Church of Jesus Christ of Latter-Day Saints scriptures.
 
 6.  The last line of code creates a plot that shows the sentiment of each chapter in the Church of Jesus Christ of Latter-Day Saints scriptures. The sentiment is calculated by counting the number of positive and negative words in each chapter and then subtracting the number of negative words from the number of positive words.
 

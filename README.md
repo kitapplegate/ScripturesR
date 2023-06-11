@@ -56,7 +56,8 @@ lds_scriptures %>%
     the text into individual words and assigning each word a sentiment.
 
 5.  The next line of code creates a plot that shows the most common
-    words with the sentiment “joy” in the LDS scriptures.
+    words with the sentiment “joy” in the the Church of Jesus Christ of
+    Latter-Day Saints scriptures.
 
 6.  The last line of code creates a plot that shows the sentiment of
     each chapter in the Church of Jesus Christ of Latter-Day Saints
@@ -121,4 +122,4 @@ ggplot(scriptures_sentiment, aes(index, sentiment, fill = volume_title)) +
   facet_wrap(~volume_title, scales = "free_x")
 ```
 
-![](Title_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
