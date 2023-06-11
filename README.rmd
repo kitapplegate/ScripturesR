@@ -5,7 +5,7 @@ date: "2023-06-11"
 output: github_document
 ---
 
-The code is a sentiment of the Church of Jesus Christ of Latter-Day Saints scriptures. The results of the analysis can be used to understand how the scriptures make people feel. For example, the plot that shows the most common words with the sentiment "joy" shows that the word "joy" is used frequently in the scriptures. This suggests that the scriptures often make people feel happy. The plot that shows the sentiment of each chapter in the scriptures shows that most chapters have a positive sentiment. This suggests that the scriptures are generally uplifting and inspiring. I learned and used the code made by Julia Silge in her book [Text Mining with R: A Tidy Approach](https://www.tidytextmining.com/index.html)
+The code is a sentiment of the Church of Jesus Christ of Latter-Day Saints scriptures. The results of the analysis can be used to understand how the scriptures make people feel. For example, the plot that shows the most common words with the sentiment "joy" shows that the word "joy" is used frequently in the scriptures. This suggests the scriptures often make people feel happy. The plot that shows the sentiment of each chapter in the scriptures shows that most chapters have a positive sentiment. This suggests that the scriptures are generally uplifting and inspiring. I learned and used the code made by Julia Silge in her book [Text Mining with R: A Tidy Approach](https://www.tidytextmining.com/index.html)
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
